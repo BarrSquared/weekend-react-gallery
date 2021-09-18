@@ -1,12 +1,10 @@
 # Project: Gallery of My Life
 
-
+A slice of my simple life.
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This project is to display a sample gallery of things in my life. Each photo will have a description, which is revealed on click. Each photo will also have a 'like' button which will increment a counter on click. By completing this project I'm practicing the use of React.js, inline Arrow functions, .map for loops, GET route, PUT route, and conditional rendering.
 
 ### Task List
 
