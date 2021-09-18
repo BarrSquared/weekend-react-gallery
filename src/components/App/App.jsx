@@ -28,13 +28,6 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <div>
-          <ul>
-            {gallery.map(item => {
-              (<img src={item.path} /> )
-            })}
-          </ul>
-        </div>
         <p>Gallery goes here</p>
         <img src="images/goat_small.jpg"/>
       </div>
