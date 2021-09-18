@@ -14,7 +14,7 @@ This project is to display a sample gallery of things in my life. Each photo wil
 [X] Add images to public gallery
     [X] Update gallery.data.js with path for each image
 [X] Create axios GET route in App.jsx to pull data from gallery to use on the DOM
-[] Create variable for GalleryList
+[] Create destructured variable for GalleryArray
 [] Create a variable for specific GalleryItem  
     [] Create a function for GalleryItem to toggle between the photo and description onClick, using conditional rendering
     [] Use PUT and GalleryItem to like a photo, incrementing like-count
