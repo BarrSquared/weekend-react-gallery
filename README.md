@@ -13,6 +13,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [] Break project down into smaller pieces
     - commit with each step
     - keep steps to where you can see updates
-[] Add images to public gallery
-    [] Update gallery.data.js with path for each image
-[] 
+[X] Add images to public gallery
+    [X] Update gallery.data.js with path for each image
+[] Create GET route in App.jsx to post gallery to the DOM
+[] Create 
