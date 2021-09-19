@@ -47,6 +47,8 @@ function App() {
       })
     }
 
+    
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -56,10 +58,12 @@ function App() {
         <ul>
           <>
           <div>
-            {galleryArray.map((image) => <div> <img key={image.path} src={image.path} /> 
+            {
+            galleryArray.map((image) => <div> <img key={image.path} src={image.path} /> 
             <div>{ image.likes } people love it!</div>
             <button onClick={ () => { incrementPhotoLike (image.id) }}>Love it!</button>
-            </div>)}
+            </div>)
+            }
           </div>
           </>
         </ul>
