@@ -10,10 +10,6 @@ function App() {
   //destructuring galleryArray
   const [galleryArray, setGalleryArray] = useState ([]);
 
-  // const [galleryItem, setGalleryItem] = useState('');
-
-  const [counter, setCounter] = useState(0);
-
     const fetchGalleryArray = () => {
       axios({
         method: 'GET',
@@ -31,15 +27,25 @@ function App() {
       fetchGalleryArray();
     }, []);
 
-    // function galleryItem({ picture }) {
-    //   const [itemDisplayed, setItemDesplayed] = useState(true);
+    // const [counter, setCounter] = useState(0);
+    // const handleLikeClick = () => {
+    //   console.log('Clicked "Like" button!')
+    //   setCounter(counter + 1);
     // }
 
-    const handleLikeClick = () => {
-      console.log('Clicked "Like" button!')
-      setCounter(counter + 1);
+    // PUT for incrementing photo like
+    const incrementPhotoLike = (photoId) => {
+        console.log(photoId);
+      axios({
+        method: 'PUT',
+        url: `/gallery/${photoId}`
+      }).then((response) => {
+        fetchGalleryArray();
+      }).catch((error) => {
+        alert('Error in incrementing photo like')
+        console.log(error);
+      })
     }
-
 
     return (
       <div className="App">
@@ -50,13 +56,14 @@ function App() {
         <ul>
           <>
           <div>
-            {galleryArray.map((image) => <img key={image.path} src={image.path} />)}
-            <div>{ counter } people love it!</div>
-            <button onClick={ handleLikeClick }>Love it!</button>
+            {galleryArray.map((image) => <div> <img key={image.path} src={image.path} /> 
+            <div>{ image.likes } people love it!</div>
+            <button onClick={ () => { incrementPhotoLike (image.id) }}>Love it!</button>
+            </div>)}
           </div>
           </>
         </ul>
-        <img src="images/goat_small.jpg"/>
+        {/* <img src="images/goat_small.jpg"/> */}
       </div>
     );
 }
