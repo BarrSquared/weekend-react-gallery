@@ -38,7 +38,7 @@ function App() {
         console.log(photoId);
       axios({
         method: 'PUT',
-        url: `/gallery/${photoId}`
+        url: `/gallery/like/${photoId}`
       }).then((response) => {
         fetchGalleryArray();
       }).catch((error) => {
