@@ -47,19 +47,20 @@ function App() {
       })
     }
 
-    
+
     
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
         <ul>
           <>
           <div>
             {
-            galleryArray.map((image) => <div> <img key={image.path} src={image.path} /> 
+            galleryArray.map( //{ toggleImgDesc ? (image.path) : (image.description) }
+
+              (image) => <div> <img key={image.path} src={image.path} /> 
             <div>{ image.likes } people love it!</div>
             <button onClick={ () => { incrementPhotoLike (image.id) }}>Love it!</button>
             </div>)
