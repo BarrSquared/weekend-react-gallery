@@ -77,7 +77,7 @@ export default App;
 
 
 
-
+// // My first attempt, had everything but conditional rendering with description toggle
 //     // return in this case is our 'render' function
 //     return (
 //       <div className="App">
